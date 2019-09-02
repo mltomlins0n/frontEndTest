@@ -1,0 +1,96 @@
+body {
+    background-color: silver;
+}
+
+main {
+    background-color: indigo;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0.2,0.2);
+    }
+    50% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(0.2,0.2);
+    }
+}
+
+#banner {
+    margin: auto;
+    margin-bottom: 1em;
+    letter-spacing: 3em;
+    font-size: 2em;
+    color: black;
+    background-color: goldenrod;
+    width: auto;
+    height: 5em;
+    text-align: center;
+    padding: 0.5em;
+    border-top: 0.2em solid black;
+    border-bottom: 0.1em dashed black;
+}
+
+section[name=button]{
+    /* border: 0.2em solid red; */
+    width: 900px;
+    margin: auto;
+    margin-top: 1em;
+}
+
+button {
+    /* 0.0001s = epilepsy mode  */
+    animation: zoom 2s infinite linear;
+    margin: auto;
+    block-size: 5em; 
+    font-size: 5em; 
+    border: 10px solid red; 
+    background-color: lime;
+}
+
+button:hover {
+    animation: zoom 0.0001s infinite linear;
+    background-color: red;
+    border-color: lime;
+    color: white;
+}
+
+section[name=input]{
+     /* border: 0.2em solid red;  */
+    width: 20em;
+    margin: auto;
+}
+
+#uselessInput {
+    border: 0.2em solid black;
+    width: 20em;
+    height: 1.5em;
+    border-radius: 1em; 
+    text-indent: 0.5em; 
+    margin: auto;
+    clear: both;
+}
+
+h1, h3, p {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: comic sans MS;
+}
+
+section[name=bio] {
+     border-top: 0.1em dashed goldenrod; 
+     border-bottom: 0.1em dashed goldenrod; 
+     padding-inline-start: 1em;
+}
+
+.name {
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1em;
+}
+
+#dob {
+    font-family: Cambria;
+}
