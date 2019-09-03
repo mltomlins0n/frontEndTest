@@ -18,17 +18,24 @@ function handleClick(element) {
 }
 
 const containerElement = document.getElementById("container");
+const historyContainer = document.getElementById("history");
+
 const newElement = document.createElement("h1");
 newElement.id="number";
 newElement.innerText = "0";
-containerElement.appendChild(newElement);
+containerElement.append(newElement);
+
+const historyHeader = document.createElement("h2");
+historyHeader.innerText = "History: ";
+historyContainer.appendChild(historyHeader);
 
 const newButton = document.createElement("button");
 newButton.className="numButton";
 newButton.innerText = "-10";
 containerElement.append(newButton);
 newButton.addEventListener("click", () => {
-    subTen();
+    subTen()
+    counterHistory();
 });
 
 const newButton2 = document.createElement("button");
@@ -36,7 +43,8 @@ newButton2.className="numButton";
 newButton2.innerText = "-1";
 containerElement.append(newButton2);  
 newButton2.addEventListener("click", () => {
-    decrement();
+    decrement()
+    counterHistory();
 });
 
 const newButton3 = document.createElement("button");
@@ -44,7 +52,8 @@ newButton3.className="numButton";
 newButton3.innerText = "Reset";
 containerElement.append(newButton3);
 newButton3.addEventListener("click", () => {
-    reset();
+    reset()
+    counterHistory();
 });
 
 const newButton4 = document.createElement("button");
@@ -52,7 +61,8 @@ newButton4.className="numButton";
 newButton4.innerText = "+1";
 containerElement.append(newButton4);  
 newButton4.addEventListener("click", () => {
-    increment();
+    increment()
+    counterHistory();
 });
 
 const newButton5 = document.createElement("button");
@@ -60,7 +70,8 @@ newButton5.className="numButton";
 newButton5.innerText = "+10";
 containerElement.append(newButton5);  
 newButton5.addEventListener("click", () => {
-    addTen();
+    addTen()
+    counterHistory();
 });
 
 let counter = 0;
@@ -100,12 +111,50 @@ function subTen() {
 
 function reset() {
     counter = 0;
-    updateCounter(0);
+    updateCounter();
 }
 
 function counterHistory() {
-    lastcounter = counter;
-    console.log(lastCounter);
+    let lastCounter = counter;
+    const lastCount = document.createElement("button");
+    lastCount.className="numButton";
+    lastCount.innerText = lastCounter;
+    historyContainer.append(lastCount);  
+    lastCount.addEventListener("click", () => {
+        newElement.innerText=lastCounter;
+});
+}
+
+function handleEvent(element) {
+    console.log("Password: ", element.value);
+}
+
+function handleFormSubmit(form) {
+    console.log("Form submitted:");
+
+    const formDataObj = {}; // Delcare an object
+
+    // Loop through form elements and add them to object
+    for (let element of form.elements){
+        console.log(element.value);
+        if (element.id != ""){
+            formDataObj[element.id] = element.value;
+        }
+    }
+    console.log(formDataObj);
+
+    alert("Success!: \n" + 
+          "Name: " + formDataObj.firstName + " " + formDataObj.lastName + "\n" +
+          "D.O.B: " + formDataObj.dob + "\n" + 
+          "Email: " + formDataObj.email + "\n" +);
+
+    return false;
+}
+
+function handleChange(form) {
+    //console.log("change");
+    const alert = document.getElementById("bs-alert");
+    alert.innerText = "Welcome back " + form.value;
 }
 
 function messageFunc() {
@@ -195,5 +244,5 @@ const betterFilteredAnimals = animals
     .reduce ((prev, current) => prev + current, "Animals: ") // "Animals: " is the initial value of "prev"
     .concat(".");
 
-console.log(filteredAnimals);
-console.log(betterFilteredAnimals);
+// console.log(filteredAnimals);
+// console.log(betterFilteredAnimals);
