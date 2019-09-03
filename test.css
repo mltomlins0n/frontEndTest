@@ -33,14 +33,11 @@ main {
     border-bottom: 0.1em dashed black;
 }
 
-section[name=button]{
+#stupidButton{
     /* border: 0.2em solid red; */
     width: 900px;
     margin: auto;
     margin-top: 1em;
-}
-
-button {
     /* 0.0001s = epilepsy mode  */
     animation: zoom 2s infinite linear;
     margin: auto;
@@ -50,31 +47,48 @@ button {
     background-color: lime;
 }
 
-button:hover {
+#stupidButton:hover {
     animation: zoom 0.0001s infinite linear;
     background-color: red;
     border-color: lime;
     color: white;
 }
 
-section[name=input]{
-     /* border: 0.2em solid red;  */
+#uselessInput{
     width: 20em;
     margin: auto;
-}
-
-#uselessInput {
     border: 0.2em solid black;
-    width: 20em;
     height: 1.5em;
     border-radius: 1em; 
     text-indent: 0.5em; 
-    margin: auto;
     clear: both;
 }
 
+#number {
+    font-size: 10em;
+    width: 400px;
+    border: 0.1em solid black;
+    text-align: center;
+    margin: auto;
+}
+
+#container {
+     /* border: 0.5em solid red; */
+     width: 650px;
+     margin: auto;
+}
+
+.numButton {
+    /* border: 0.5em solid red; */
+     margin: 0.5em; 
+    padding: 0.5em;
+    width: 100px;
+    height: 50px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
 h1, h3, p {
-    color: white;
     font-size: 1.5em;
     font-weight: bold;
     font-family: comic sans MS;
