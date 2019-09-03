@@ -146,7 +146,7 @@ function handleFormSubmit(form) {
     alert("Success!: \n" + 
           "Name: " + formDataObj.firstName + " " + formDataObj.lastName + "\n" +
           "D.O.B: " + formDataObj.dob + "\n" + 
-          "Email: " + formDataObj.email + "\n" +);
+          "Email: " + formDataObj.email + "\n");
 
     return false;
 }

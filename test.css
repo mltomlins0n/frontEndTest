@@ -23,7 +23,7 @@ main {
     margin-bottom: 1em;
     letter-spacing: 3em;
     font-size: 2em;
-    color: black;
+    color: white;
     background-color: goldenrod;
     width: auto;
     height: 5em;
@@ -67,7 +67,7 @@ main {
 #number {
     font-size: 10em;
     width: 400px;
-    border: 0.1em solid black;
+    border: 0.05em solid black;
     text-align: center;
     margin: auto;
 }
@@ -76,6 +76,7 @@ main {
      /* border: 0.5em solid red; */
      width: 650px;
      margin: auto;
+     text-align: center;
 }
 
 #history {
@@ -96,13 +97,14 @@ main {
 h1, h3, p {
     font-size: 1.5em;
     font-weight: bold;
-    font-family: comic sans MS;
 }
 
-section[name=bio] {
+#bio {
      border-top: 0.1em dashed goldenrod; 
      border-bottom: 0.1em dashed goldenrod; 
      padding-inline-start: 1em;
+     color: white;
+     font-family: comic sans MS;
 }
 
 .name {
@@ -120,4 +122,5 @@ form {
     margin: 1em;
     padding: 1em;
     text-align: center;
+    font-family: Cambria, sans-serif;
 }
