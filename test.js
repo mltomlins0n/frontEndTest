@@ -14,22 +14,68 @@
 // let message = 'This is a variable message';
 // console.log (message);
 
-const people =[
-    'Shafiq',
-    'Martin',
-    'William',
-    'Dylan',
-    'Chris'
-];
-// a space + , skips that element
-const[ ,one, ,two] = people;
-console.log('People: ' + one + ' and ' + two);
+// const people =[
+//     'Shafiq',
+//     'Martin',
+//     'William',
+//     'Dylan',
+//     'Chris'
+// ];
+// // a space + ',' skips that element
+// const[ ,one, ,two] = people;
+// console.log('People: ' + one + ' and ' + two);
 
-function handleClick(element) {
-    alert('WHY CLICK THIS?!');
-    //element.style.backgroundColor = 'black';
-    //element.innerText = '?!?!?!?!?!?!?!?!?!?!';
-}
+// const acc1 = {
+//     id: 1,
+//     name: 'Martin',
+//     locale: 'Newcastle'
+// }
+
+// const acc2 = {
+//     id: 2,
+//     name: 'Dylan',
+//     locale: 'Bolton'
+// }
+
+// const {name, ...rest} = acc1;
+// const merged = {...acc1, ...acc2};
+// console.log(merged);
+
+// const ppl = [
+//     'Martin',
+//     'Shafiq'
+// ]
+
+// const ppl2 = [
+//     'William',
+//     'Dylan',
+//     'Chris'
+// ]
+
+// const merged = {...ppl, ...ppl2};
+// console.log(merged);
+
+// function spreadArgs(arg1, ...restOfArgs) {
+//     console.log(arg1, restOfArgs);
+// }
+// spreadArgs(1,2,3,'Four',5,6);
+
+// function passObj({name}) {
+//     console.log('My name is ' + name);
+// }
+// passObj({name:'Martin'});
+
+// // swap variables
+// let a = 'basketball';
+// let b = 'spanner';
+// [a,b] = [b,a];
+// console.log(a, b);
+
+// function handleClick(element) {
+//     alert('WHY CLICK THIS?!');
+//     //element.style.backgroundColor = 'black';
+//     //element.innerText = '?!?!?!?!?!?!?!?!?!?!';
+// }
 
 const containerElement = document.getElementById('container');
 const historyContainer = document.getElementById('history');
