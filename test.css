@@ -84,7 +84,7 @@ main {
 }
 
 .numButton {
-    /* border: 0.5em solid red; */
+    /* border: 0.15em solid goldenrod; */
     margin: 0.5em; 
     padding: 0.5em;
     width: 100px;
@@ -92,6 +92,9 @@ main {
     font-size: 1.2em;
     font-weight: bold;
     text-align: center;
+    border-radius: 1em;
+    background-color: black;
+    color: white;
 }
 
 h1, h3, p {
