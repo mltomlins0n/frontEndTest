@@ -81,7 +81,7 @@ const containerElement = document.getElementById('container');
 const historyContainer = document.getElementById('history');
 
 const newElement = document.createElement('h1');
-newElement.id='number';
+newElement.id = 'number';
 newElement.innerText = '0';
 containerElement.append(newElement);
 
@@ -90,7 +90,7 @@ historyHeader.innerText = 'History: ';
 historyContainer.appendChild(historyHeader);
 
 const newButton = document.createElement('button');
-newButton.className='numButton';
+newButton.className = 'numButton';
 newButton.innerText = '-10';
 containerElement.append(newButton);
 newButton.addEventListener('click', () => {
@@ -99,16 +99,16 @@ newButton.addEventListener('click', () => {
 });
 
 const newButton2 = document.createElement('button');
-newButton2.className='numButton';
+newButton2.className = 'numButton';
 newButton2.innerText = '-1';
-containerElement.append(newButton2);  
+containerElement.append(newButton2);
 newButton2.addEventListener('click', () => {
     decrement()
     counterHistory();
 });
 
 const newButton3 = document.createElement('button');
-newButton3.className='numButton';
+newButton3.className = 'numButton';
 newButton3.innerText = 'Reset';
 containerElement.append(newButton3);
 newButton3.addEventListener('click', () => {
@@ -117,18 +117,18 @@ newButton3.addEventListener('click', () => {
 });
 
 const newButton4 = document.createElement('button');
-newButton4.className='numButton';
+newButton4.className = 'numButton';
 newButton4.innerText = '+1';
-containerElement.append(newButton4);  
+containerElement.append(newButton4);
 newButton4.addEventListener('click', () => {
     increment()
     counterHistory();
 });
 
 const newButton5 = document.createElement('button');
-newButton5.className='numButton';
+newButton5.className = 'numButton';
 newButton5.innerText = '+10';
-containerElement.append(newButton5);  
+containerElement.append(newButton5);
 newButton5.addEventListener('click', () => {
     addTen()
     counterHistory();
@@ -139,13 +139,13 @@ let lastCounter = 0;
 
 function updateCounter() {
     newElement.innerText = counter;
-    if (counter %2 == 0){
-        document.getElementById('number').style.backgroundColor='green';
+    if (counter % 2 == 0) {
+        document.getElementById('number').style.backgroundColor = 'green';
     } else {
-        document.getElementById('number').style.backgroundColor='red';
+        document.getElementById('number').style.backgroundColor = 'red';
     }
     if (counter > 100) {
-        document.getElementById('number').innerText=counter + '!';
+        document.getElementById('number').innerText = counter + '!';
     }
 }
 
@@ -177,12 +177,12 @@ function reset() {
 function counterHistory() {
     let lastCounter = counter;
     const lastCount = document.createElement('button');
-    lastCount.className='numButton';
+    lastCount.className = 'numButton';
     lastCount.innerText = lastCounter;
-    historyContainer.append(lastCount);  
+    historyContainer.append(lastCount);
     lastCount.addEventListener('click', () => {
-        newElement.innerText=lastCounter;
-});
+        newElement.innerText = lastCounter;
+    });
 }
 
 function handleEvent(element) {
@@ -195,16 +195,16 @@ function handleFormSubmit(form) {
     const formDataObj = {}; // Delcare an object
 
     // Loop through form elements and add them to object
-    for (let element of form.elements){
+    for (let element of form.elements) {
         console.log(element.value);
-        if (element.id != ''){
+        if (element.id != '') {
             formDataObj[element.id] = element.value;
         }
     }
     console.log(formDataObj);
 
     // destructure form object
-    const{firstName, lastName, dob:DOB, email} = formDataObj;
+    const { firstName, lastName, dob: DOB, email } = formDataObj;
 
     console.log('Destructured form: ');
     console.log(firstName + ' ' + lastName);
@@ -216,10 +216,10 @@ function handleFormSubmit(form) {
     // console.log(firstName);
     // console.log('Rest: ', rest);
 
-    alert('Success!: \n' + 
-          'Name: ' + firstName + ' ' + lastName + '\n' +
-          'D.O.B: ' + DOB + '\n' + 
-          'Email: ' + email + '\n');
+    alert('Success!: \n' +
+        'Name: ' + firstName + ' ' + lastName + '\n' +
+        'D.O.B: ' + DOB + '\n' +
+        'Email: ' + email + '\n');
 
     return false;
 }
@@ -238,7 +238,7 @@ function handleClick() {
     location.href = 'secondPage.html?name=martin&'; // add data into URL
 }
 
-function getArgs(){
+function getArgs() {
     return arguments; // gets all args passed into function
 }
 
@@ -265,12 +265,12 @@ function multiply(a, b) {
     return a * b;
 }
 
-function multiplyPrint(a, b){
-    let result = multiply(a,b);
+function multiplyPrint(a, b) {
+    let result = multiply(a, b);
     console.log(result);
 }
 
-const multiplyPrint2 = (a,b) => {
+const multiplyPrint2 = (a, b) => {
     let result = multiplyPrint(a, b);
     console.log(result);
 }
@@ -278,7 +278,7 @@ const multiplyPrint2 = (a,b) => {
 function multiplyAll() {
     arguments;
     let answer = 1;
-    for (let i = 0; i<arguments.length; i++) {
+    for (let i = 0; i < arguments.length; i++) {
         answer *= arguments[i];
     }
     console.log(answer);
@@ -288,13 +288,13 @@ let myArray = ['a', 'b', 'c'];
 
 function printArray() {
     myArray.forEach((value, index, array) => {
-    console.log('Value: ' + value + ' Index: ' + index + ' Array: ' + array);
-});
+        console.log('Value: ' + value + ' Index: ' + index + ' Array: ' + array);
+    });
 }
 //printArray();
 
-const animals = ['frog', 'llama', 'elephant', 'crocodile', 'hippopotamus', 
-                 'aardvark', 'geoff', 'galapagos giant tortoise'];
+const animals = ['frog', 'llama', 'elephant', 'crocodile', 'hippopotamus',
+    'aardvark', 'geoff', 'galapagos giant tortoise'];
 
 let filteredAnimals = 'Animals: ' + animals.filter((value, index) => {
     if (value.length >= 9) { // filter out words that are 9 chars or longer
@@ -303,11 +303,11 @@ let filteredAnimals = 'Animals: ' + animals.filter((value, index) => {
         return true;
     }
 }).map((value, index, array) => {
-    if (index < array.length -1) {
+    if (index < array.length - 1) {
         return value[0].toUpperCase() + value.substring(1) + ', ';
     } else {
         return value[0].toUpperCase() + value.substring(1) + '.';
-        
+
     }
 }).reduce((prev, current) => {
     return prev + current;
@@ -315,9 +315,9 @@ let filteredAnimals = 'Animals: ' + animals.filter((value, index) => {
 
 const betterFilteredAnimals = animals
     .filter(item => item.length < 9)
-    .map (item => item[0].toUpperCase() + item.slice(1))
-    .map ((item, index) => index ? ', ' + item : item) // True: add comma. False: just add item
-    .reduce ((prev, current) => prev + current, 'Animals: ') // 'Animals: ' is the initial value of 'prev'
+    .map(item => item[0].toUpperCase() + item.slice(1))
+    .map((item, index) => index ? ', ' + item : item) // True: add comma. False: just add item
+    .reduce((prev, current) => prev + current, 'Animals: ') // 'Animals: ' is the initial value of 'prev'
     .concat('.');
 
 // console.log(filteredAnimals);

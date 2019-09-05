@@ -8,8 +8,8 @@ function handleFormSubmit(form) {
     const formDataObj = {}; // Delcare an object
 
     // Loop through form elements and add them to object
-    for (let element of form.elements){
-        if (element.id != '' || element.value != ''){
+    for (let element of form.elements) {
+        if (element.id != '' || element.value != '') {
             formDataObj[element.id] = element.value;
         }
     }

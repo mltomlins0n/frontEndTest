@@ -1,3 +1,3 @@
 function handleClick() {
-    location.href='login.html';
+    location.href = 'login.html';
 }

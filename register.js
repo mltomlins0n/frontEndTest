@@ -8,8 +8,8 @@ function handleFormSubmit(form) {
     const formDataObj = {}; // Delcare an object
 
     // Loop through form elements and add them to object
-    for (let element of form.elements){
-        if (element.id != '' || element.value != ''){
+    for (let element of form.elements) {
+        if (element.id != '' || element.value != '') {
             formDataObj[element.id] = element.value;
         }
     }
@@ -30,7 +30,7 @@ function handleFormSubmit(form) {
     console.log(formDataObj);
 
     // destructure form object
-    const{username, password, firstName, lastName, email} = formDataObj;
+    const { username, password, firstName, lastName, email } = formDataObj;
 
     console.log('Destructured form: ');
     console.log(firstName + ' ' + lastName);
@@ -38,9 +38,9 @@ function handleFormSubmit(form) {
     console.log(username);
     console.log(password);
 
-    alert('Success!: \n' + 
-          'Username: ' + username + '\n' + 
-          'Email: ' + email + '\n');
+    alert('Success!: \n' +
+        'Username: ' + username + '\n' +
+        'Email: ' + email + '\n');
 
     // // Destructuring using 'spread' operator
     // const{firstName, ...rest} = formDataObj;
