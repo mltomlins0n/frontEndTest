@@ -232,7 +232,10 @@ function handleChange(form) {
 
 function handleClick() {
     document.cookie = 'name=Martin';
-    location.href = 'secondPage.html';
+    localStorage.setItem('randomCrap', 'it\'s junk');
+    localStorage.setItem('moreRandomCrap', 'it\'s still junk');
+    sessionStorage.setItem('sessionCrap', 'it\s more junk');
+    location.href = 'secondPage.html?name=martin&'; // add data into URL
 }
 
 function getArgs(){
