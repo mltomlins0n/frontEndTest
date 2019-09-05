@@ -34,17 +34,17 @@ main {
 }
 
 #stupidButton{
-    /* border: 0.2em solid red; */
+     /* border: 0.2em solid black; */
     width: 900px;
     margin: auto;
     margin-top: 1em;
     /* 0.0001s = epilepsy mode  */
     animation: zoom 2s infinite linear;
-    margin: auto;
     block-size: 5em; 
     font-size: 5em; 
     border: 10px solid red; 
     background-color: lime;
+    display: flex;
 }
 
 #stupidButton:hover {
@@ -56,12 +56,13 @@ main {
 
 #uselessInput{
     width: 20em;
-    margin: auto;
+     margin: auto; 
+     margin-bottom: 0.5em;
     border: 0.2em solid black;
     height: 1.5em;
     border-radius: 1em; 
     text-indent: 0.5em; 
-    clear: both;
+    display: flex;
 }
 
 #number {

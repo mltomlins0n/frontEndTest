@@ -230,6 +230,11 @@ function handleChange(form) {
     alert.innerText = 'Welcome back ' + form.value;
 }
 
+function handleClick() {
+    document.cookie = 'name=Martin';
+    location.href = 'secondPage.html';
+}
+
 function getArgs(){
     return arguments; // gets all args passed into function
 }

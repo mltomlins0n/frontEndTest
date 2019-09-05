@@ -24,6 +24,7 @@ h1 {
 #details p, li{
     display: inline-block;
     padding: 0.2em; 
+    font-size: 1.5em;
 }
 
 #memberSection {
