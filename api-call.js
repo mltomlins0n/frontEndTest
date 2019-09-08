@@ -17,7 +17,7 @@ makeRequest()
     .then(data => {
         console.log('This is the response', data);
         // destruct object
-        const{squadName, homeTown, formed, secretBase, active, members} = data;
+        const{squadName, homeTown, formed, secretBase, members} = data;
 
         function createHeader() {
         const heading = document.getElementById('heading');
